@@ -10,6 +10,14 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  Future<void> _login() async {
+    Navigator.pushReplacementNamed(context, '/login');
+  }
+
+  Future<void> _regist() async {
+    Navigator.pushReplacementNamed(context, '/register');
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,10 +38,113 @@ class _HomePageState extends State<HomePage> {
             SizedBox(
               height: 20,
             ),
-            ElevatedButton(
-              style: BorderRadius.circular(20),
-              child: const Text('Mulai'),
-              onPressed: () {},
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 130.0),
+              child: GestureDetector(
+                onTap: () {
+                  showModalBottomSheet<void>(
+                      context: context,
+                      shape: RoundedRectangleBorder(
+                          borderRadius:
+                              BorderRadius.vertical(top: Radius.circular(50))),
+                      builder: (BuildContext context) {
+                        return Container(
+                          height: 290,
+                          decoration: BoxDecoration(
+                            color: Colors.grey[300],
+                            borderRadius:
+                                BorderRadius.vertical(top: Radius.circular(50)),
+                          ),
+                          child: Padding(
+                            padding: const EdgeInsets.all(50.0),
+                            child: Column(children: [
+                              Center(
+                                child: Text(
+                                  "Apakah Kamu sudah punya akun, jika sudah kamu dapat langsung tap button login dibawah ini, atau kamu bisa mendaftar dengan cara menekan button daftar",
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(fontSize: 18),
+                                ),
+                              ),
+                              SizedBox(
+                                height: 20,
+                              ),
+                              Center(
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.symmetric(
+                                          horizontal: 15.0),
+                                      child: GestureDetector(
+                                        onTap: _login,
+                                        child: Container(
+                                          padding: EdgeInsets.all(20),
+                                          decoration: BoxDecoration(
+                                            color: Colors.grey[400],
+                                            borderRadius:
+                                                BorderRadius.circular(40),
+                                          ),
+                                          child: Center(
+                                            child: Text(
+                                              'Login',
+                                              style: TextStyle(
+                                                fontWeight: FontWeight.bold,
+                                                fontSize: 18,
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.symmetric(
+                                          horizontal: 15.0),
+                                      child: GestureDetector(
+                                        onTap: _regist,
+                                        child: Container(
+                                          padding: EdgeInsets.all(20),
+                                          decoration: BoxDecoration(
+                                            color: Colors.grey[400],
+                                            borderRadius:
+                                                BorderRadius.circular(40),
+                                          ),
+                                          child: Center(
+                                            child: Text(
+                                              'Daftar',
+                                              style: TextStyle(
+                                                fontWeight: FontWeight.bold,
+                                                fontSize: 18,
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ]),
+                          ),
+                        );
+                      });
+                },
+                child: Container(
+                  padding: EdgeInsets.all(15),
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(40),
+                  ),
+                  child: Center(
+                    child: Text(
+                      'Mulai',
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 18,
+                      ),
+                    ),
+                  ),
+                ),
+              ),
             ),
           ],
         ),

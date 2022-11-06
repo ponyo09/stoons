@@ -1,0 +1,22 @@
+import 'package:flutter/foundation.dart';
+import 'package:flutter/material.dart';
+
+class loginPage extends StatefulWidget {
+  const loginPage({super.key});
+
+  @override
+  State<loginPage> createState() => _loginPageState();
+}
+
+class _loginPageState extends State<loginPage> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.white,
+      body: Center(
+          child: Container(
+        child: Text("ini login"),
+      )),
+    );
+  }
+}
