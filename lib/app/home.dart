@@ -80,7 +80,8 @@ class _HomePageState extends State<HomePage> {
                                         child: Container(
                                           padding: EdgeInsets.all(20),
                                           decoration: BoxDecoration(
-                                            color: Colors.grey[400],
+                                            color: Color.fromARGB(
+                                                255, 58, 26, 164),
                                             borderRadius:
                                                 BorderRadius.circular(40),
                                           ),
@@ -88,6 +89,7 @@ class _HomePageState extends State<HomePage> {
                                             child: Text(
                                               'Login',
                                               style: TextStyle(
+                                                color: Colors.white,
                                                 fontWeight: FontWeight.bold,
                                                 fontSize: 18,
                                               ),
@@ -104,7 +106,8 @@ class _HomePageState extends State<HomePage> {
                                         child: Container(
                                           padding: EdgeInsets.all(20),
                                           decoration: BoxDecoration(
-                                            color: Colors.grey[400],
+                                            color: Color.fromARGB(
+                                                255, 58, 26, 164),
                                             borderRadius:
                                                 BorderRadius.circular(40),
                                           ),
@@ -112,6 +115,7 @@ class _HomePageState extends State<HomePage> {
                                             child: Text(
                                               'Daftar',
                                               style: TextStyle(
+                                                color: Colors.white,
                                                 fontWeight: FontWeight.bold,
                                                 fontSize: 18,
                                               ),
