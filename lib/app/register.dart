@@ -11,11 +11,30 @@ class _registPageState extends State<registPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
-      body: Center(
-          child: Container(
-        child: Text("ini regist"),
-      )),
+      backgroundColor: Colors.grey[300],
+      appBar: AppBar(
+        backgroundColor: Color.fromARGB(255, 75, 37, 164),
+        automaticallyImplyLeading: false,
+        title: Text(
+          'Sign Up',
+          style: TextStyle(
+            color: Colors.white,
+            fontSize: 22,
+          ),
+        ),
+        actions: [],
+        centerTitle: false,
+        elevation: 2,
+      ),
+      body: SafeArea(
+        child: GestureDetector(
+          onTap: () => FocusScope.of(context).unfocus(),
+          child: Column(
+            mainAxisSize: MainAxisSize.max,
+            children: [],
+          ),
+        ),
+      ),
     );
   }
 }
