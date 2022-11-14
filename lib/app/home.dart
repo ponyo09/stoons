@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_signin_button/button_list.dart';
 import 'package:flutter_signin_button/button_view.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -27,14 +28,19 @@ class _HomePageState extends State<HomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(
-              Icons.science,
-              size: 100,
+            Container(
+              width: 200,
+              height: 200,
+              padding: const EdgeInsets.all(10),
+              child: Image(
+                image: AssetImage("assets/1046269.png"),
+              ),
             ),
-            SizedBox(
-              height: 150,
+            Text(
+              "Stoon",
+              style: GoogleFonts.indieFlower(
+                  fontSize: 36, fontWeight: FontWeight.bold),
             ),
-            Text("Stoon"),
             SizedBox(
               height: 20,
             ),
@@ -44,9 +50,7 @@ class _HomePageState extends State<HomePage> {
                 onTap: () {
                   showModalBottomSheet<void>(
                       context: context,
-                      shape: RoundedRectangleBorder(
-                          borderRadius:
-                              BorderRadius.vertical(top: Radius.circular(50))),
+                      backgroundColor: Colors.transparent,
                       builder: (BuildContext context) {
                         return Container(
                           height: 290,
@@ -133,18 +137,24 @@ class _HomePageState extends State<HomePage> {
                       });
                 },
                 child: Container(
-                  padding: EdgeInsets.all(15),
+                  padding: EdgeInsets.all(8),
                   decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(40),
                   ),
                   child: Center(
-                    child: Text(
-                      'Mulai',
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 18,
-                      ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          'Mulai',
+                          style: GoogleFonts.indieFlower(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 30,
+                          ),
+                        ),
+                        Icon(Icons.play_arrow),
+                      ],
                     ),
                   ),
                 ),
