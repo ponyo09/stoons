@@ -22,7 +22,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 58, 26, 164),
+      backgroundColor: Colors.deepPurpleAccent,
       body: SafeArea(
           child: Center(
         child: Column(
@@ -84,8 +84,7 @@ class _HomePageState extends State<HomePage> {
                                         child: Container(
                                           padding: EdgeInsets.all(20),
                                           decoration: BoxDecoration(
-                                            color: Color.fromARGB(
-                                                255, 58, 26, 164),
+                                            color: Colors.deepPurpleAccent,
                                             borderRadius:
                                                 BorderRadius.circular(40),
                                           ),
@@ -110,14 +109,13 @@ class _HomePageState extends State<HomePage> {
                                         child: Container(
                                           padding: EdgeInsets.all(20),
                                           decoration: BoxDecoration(
-                                            color: Color.fromARGB(
-                                                255, 58, 26, 164),
+                                            color: Colors.deepPurpleAccent,
                                             borderRadius:
                                                 BorderRadius.circular(40),
                                           ),
                                           child: Center(
                                             child: Text(
-                                              'Daftar',
+                                              'Register',
                                               style: TextStyle(
                                                 color: Colors.white,
                                                 fontWeight: FontWeight.bold,

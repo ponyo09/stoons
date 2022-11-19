@@ -27,14 +27,18 @@ class _loginPageState extends State<loginPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      backgroundColor: Color.fromARGB(255, 58, 26, 164),
+      backgroundColor: Colors.deepPurpleAccent,
       body: SafeArea(
         child: Column(
           children: [
+            AppBar(
+              backgroundColor: Colors.transparent,
+              elevation: 0,
+            ),
             Container(
                 width: 200,
-                height: 250,
-                padding: const EdgeInsets.all(10),
+                height: 200,
+                padding: const EdgeInsets.all(8),
                 child: Image(
                   image: AssetImage("assets/1046269.png"),
                 )),
@@ -45,7 +49,6 @@ class _loginPageState extends State<loginPage> {
             ),
             Container(
               margin: EdgeInsets.only(
-                top: 10,
                 left: 10,
                 right: 10,
               ),
@@ -125,7 +128,7 @@ class _loginPageState extends State<loginPage> {
                         child: Container(
                           padding: EdgeInsets.all(10),
                           decoration: BoxDecoration(
-                              color: Colors.deepPurple,
+                              color: Colors.deepPurpleAccent,
                               borderRadius: BorderRadius.circular(25)),
                           child: Center(
                               child: Text(
@@ -157,7 +160,7 @@ class _loginPageState extends State<loginPage> {
                             onTap: _regist,
                           ),
                           SizedBox(
-                            height: 50,
+                            height: 55,
                           )
                         ],
                       )
