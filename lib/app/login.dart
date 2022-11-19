@@ -20,6 +20,10 @@ class _loginPageState extends State<loginPage> {
     _passwordVisible = false;
   }
 
+  Future<void> _regist() async {
+    Navigator.pushReplacementNamed(context, '/register');
+  }
+
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
@@ -28,8 +32,20 @@ class _loginPageState extends State<loginPage> {
         child: Column(
           children: [
             Container(
+                width: 200,
+                height: 250,
+                padding: const EdgeInsets.all(10),
+                child: Image(
+                  image: AssetImage("assets/1046269.png"),
+                )),
+            Text(
+              "Stoon",
+              style: GoogleFonts.indieFlower(
+                  fontSize: 48, fontWeight: FontWeight.bold),
+            ),
+            Container(
               margin: EdgeInsets.only(
-                top: 310,
+                top: 10,
                 left: 10,
                 right: 10,
               ),
@@ -42,75 +58,108 @@ class _loginPageState extends State<loginPage> {
                   margin: EdgeInsets.all(20),
                   child: Column(
                     children: [
-                      TextFormField(
-                          textAlign: TextAlign.start,
-                          keyboardType: TextInputType.emailAddress,
-                          decoration: InputDecoration(
-                            labelText: 'Mobile Number/Email',
-                            floatingLabelBehavior: FloatingLabelBehavior.always,
-                          )),
-                      TextFormField(
-                        obscureText: _passwordVisible,
-                        textAlign: TextAlign.start,
-                        keyboardType: TextInputType.visiblePassword,
-                        decoration: InputDecoration(
-                          labelText: 'Password',
-                          floatingLabelBehavior: FloatingLabelBehavior.always,
-                          suffixIcon: IconButton(
-                            onPressed: () {
-                              setState(() {
-                                _passwordVisible = !_passwordVisible;
-                              });
-                            },
-                            icon: Icon(
-                              _passwordVisible
-                                  ? Icons.visibility_off_outlined
-                                  : Icons.visibility_off_outlined,
+                      SizedBox(
+                        height: 10,
+                      ),
+                      Text(
+                        "Hello Again!",
+                        style: GoogleFonts.indieFlower(
+                            fontWeight: FontWeight.bold, fontSize: 36),
+                      ),
+                      SizedBox(
+                        height: 5,
+                      ),
+                      Text(
+                        'Welcome back, you\'ve been missed',
+                        style: GoogleFonts.indieFlower(fontSize: 22),
+                      ),
+                      SizedBox(
+                        height: 30,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 15.0),
+                        child: Container(
+                          decoration: BoxDecoration(
+                              color: Colors.white,
+                              border: Border.all(color: Colors.black),
+                              borderRadius: BorderRadius.circular(25)),
+                          child: Padding(
+                            padding: const EdgeInsets.only(left: 20.0),
+                            child: TextField(
+                              decoration: InputDecoration(
+                                border: InputBorder.none,
+                                hintText: "Email",
+                                hintStyle: GoogleFonts.indieFlower(),
+                              ),
                             ),
-                            iconSize: 20,
                           ),
                         ),
-                        validator: (value) {
-                          if (value!.length < 5) {
-                            return 'Must be more than 5 characters';
-                          }
-                        },
+                      ),
+                      SizedBox(height: 10),
+                      //password
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 15.0),
+                        child: Container(
+                          decoration: BoxDecoration(
+                              color: Colors.white,
+                              border: Border.all(color: Colors.black),
+                              borderRadius: BorderRadius.circular(25)),
+                          child: Padding(
+                            padding: const EdgeInsets.only(left: 20.0),
+                            child: TextField(
+                              obscureText: true,
+                              decoration: InputDecoration(
+                                border: InputBorder.none,
+                                hintText: "Password",
+                                hintStyle: GoogleFonts.indieFlower(),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        height: 20,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 15.0),
+                        child: Container(
+                          padding: EdgeInsets.all(10),
+                          decoration: BoxDecoration(
+                              color: Colors.deepPurple,
+                              borderRadius: BorderRadius.circular(25)),
+                          child: Center(
+                              child: Text(
+                            'Login',
+                            style: GoogleFonts.indieFlower(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 22),
+                          )),
+                        ),
                       ),
                       SizedBox(
                         height: 20,
                       ),
                       Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Text('Forgot your password ?'),
                           Padding(
                             padding:
-                                const EdgeInsets.symmetric(horizontal: 15.0),
-                            child: GestureDetector(
-                              onTap: () {},
-                              child: Container(
-                                padding: EdgeInsets.all(20),
-                                decoration: BoxDecoration(
-                                  color: Color.fromARGB(255, 58, 26, 164),
-                                  borderRadius: BorderRadius.circular(40),
-                                ),
-                                child: Center(
-                                  child: Text(
-                                    'Login',
-                                    style: TextStyle(
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 18,
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ),
+                                const EdgeInsets.symmetric(horizontal: 10.0),
+                            child: Text("not registered yet ?"),
                           ),
+                          GestureDetector(
+                            child: Text(
+                              "Register",
+                              style:
+                                  GoogleFonts.sourceSansPro(color: Colors.blue),
+                            ),
+                            onTap: _regist,
+                          ),
+                          SizedBox(
+                            height: 50,
+                          )
                         ],
-                      ),
-                      SizedBox(
-                        height: 200,
                       )
                     ],
                   ),
