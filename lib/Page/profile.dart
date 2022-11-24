@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:stoon/Page/dashboard.dart';
 import 'package:stoon/Page/mainpage.dart';
 
 class Profile extends StatelessWidget {
@@ -11,7 +12,14 @@ class Profile extends StatelessWidget {
     }
 
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        leading: IconButton(
+            icon: Icon(Icons.arrow_back),
+            onPressed: () {
+              Navigator.pushReplacement(
+                  context, MaterialPageRoute(builder: (context) => MainPage()));
+            }),
+      ),
       body: Container(
         color: Colors.grey,
         child: Text("ini Profile"),

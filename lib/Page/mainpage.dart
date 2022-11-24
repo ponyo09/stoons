@@ -32,6 +32,8 @@ class _MainPageState extends State<MainPage> {
     )
   ];
 
+  final PageStorageBucket bucket = PageStorageBucket();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -69,7 +71,10 @@ class _MainPageState extends State<MainPage> {
           ),
         ),
       ),
-      body: Center(child: screens.elementAt(_selectedIndex)),
+      body: PageStorage(
+        child: screens[_selectedIndex],
+        bucket: bucket,
+      ),
     );
   }
 }
