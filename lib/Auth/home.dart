@@ -60,13 +60,13 @@ class _HomePageState extends State<HomePage> {
                                 BorderRadius.vertical(top: Radius.circular(50)),
                           ),
                           child: Padding(
-                            padding: const EdgeInsets.all(50.0),
+                            padding: const EdgeInsets.all(20.0),
                             child: Column(children: [
                               Center(
                                 child: Text(
                                   "Apakah Kamu sudah punya akun, jika sudah kamu dapat langsung tap button login dibawah ini, atau kamu bisa mendaftar dengan cara menekan button daftar",
                                   textAlign: TextAlign.center,
-                                  style: TextStyle(fontSize: 18),
+                                  style: GoogleFonts.indieFlower(fontSize: 18),
                                 ),
                               ),
                               SizedBox(

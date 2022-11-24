@@ -1,9 +1,14 @@
+import 'firebase_options.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'app/home.dart';
-import 'app/login.dart';
-import 'app/register.dart';
+import 'package:stoon/Page/dashboard.dart';
+import 'package:stoon/Page/mainpage.dart';
+import 'package:stoon/Page/profile.dart';
+import 'Auth/home.dart';
+import 'Auth/login.dart';
+import 'Auth/register.dart';
 
-void main() {
+void main() async {
   runApp(const MyApp());
 }
 
@@ -18,6 +23,8 @@ class MyApp extends StatelessWidget {
       routes: <String, WidgetBuilder>{
         '/register': (BuildContext context) => new registPage(),
         '/login': (BuildContext context) => new loginPage(),
+        '/mainpage': (BuildContext context) => new MainPage(),
+        '/profile': (BuildContext context) => new Profile(),
       },
     );
   }

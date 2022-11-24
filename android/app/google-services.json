@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "257696085265",
+    "project_id": "stoon-74b9e",
+    "storage_bucket": "stoon-74b9e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:257696085265:android:5175ef0b8eebba40b908b0",
+        "android_client_info": {
+          "package_name": "com.example.stoon"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "257696085265-u5mddn9qiudts1hdemj5k7ko50f6ccc9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB9ed57rubUkVwnn4YLErhSn3rTHV36ILw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "257696085265-u5mddn9qiudts1hdemj5k7ko50f6ccc9.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "257696085265-lel62ml9rqqq567f560vd84fc5qv8i8m.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.stoon"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
